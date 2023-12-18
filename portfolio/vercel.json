@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "RICARDODJ/wsgi.py",
+        "src": "portfolio/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "RICARDODJ/wsgi.py"
+            "dest": "portfolio/wsgi.py"
         }
     ]
 }
