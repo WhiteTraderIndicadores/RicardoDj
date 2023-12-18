@@ -1,3 +1,13 @@
 {
-    "python.pythonPath": "/Users/aes-salm/.brew/bin/python3"
+    "builds": [{
+        "src": "RICARDODJ/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "RICARDODJ/wsgi.py"
+        }
+    ]
 }
